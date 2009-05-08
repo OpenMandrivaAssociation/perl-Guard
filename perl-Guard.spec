@@ -3,6 +3,8 @@
 %define ver    1.02
 %define release    %mkrel 1
 
+%define perl_convert_version() %(perl -Mversion -le '$v=version->new(%{1})->normal; $v=~s/^v//; print $v')
+
 Name:       perl-%{realname}
 Version:    %perl_convert_version %ver
 Release:    %{release}
