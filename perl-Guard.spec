@@ -1,15 +1,15 @@
 
 %define realname   Guard
-%define version    1.0
+%define ver    1.02
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
-Version:    %{version}
+Version:    %perl_convert_version %ver
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Safe cleanup blocks
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
+Source:     http://www.cpan.org/modules/by-module//%{realname}-%{ver}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
@@ -29,7 +29,7 @@ guards, which are tied to the scope exit.
 
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{realname}-%{ver} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
