@@ -1,20 +1,18 @@
-%define realname   Guard
-%define ver    1.02
-%define release    %mkrel 1
+%define upstream_name    Guard
+%define upstream_version 1.021
 
-Name:       perl-%{realname}
-Version:    %perl_convert_version %ver
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Safe cleanup blocks
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{ver}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module//%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
-
-
-
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements so-called "guards". A guard is something (usually an
@@ -26,9 +24,8 @@ objects, which execute a given code block when destroyed, and scoped
 guards, which are tied to the scope exit.
 
 
-
 %prep
-%setup -q -n %{realname}-%{ver} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,5 +46,4 @@ rm -rf %buildroot
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
