@@ -1,9 +1,9 @@
 %define upstream_name    Guard
-%define upstream_version 1.021
+%define upstream_version 1.022
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Safe cleanup blocks
 License:    GPL+ or Artistic
