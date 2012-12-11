@@ -47,3 +47,40 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorlib/*
 
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.22.0-2
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Fri Jul 22 2011 Götz Waschk <waschk@mandriva.org> 1.22.0-1
++ Revision: 691050
+- update to new version 1.022
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 1.21.0-2mdv2011.0
++ Revision: 555932
+- rebuild for perl 5.12
+
+* Fri Jul 24 2009 Jérôme Quelin <jquelin@mandriva.org> 1.21.0-1mdv2010.0
++ Revision: 399301
+- update to 1.021
+- fixed license field
+
+  + Götz Waschk <waschk@mandriva.org>
+    - remove the macro definition again
+
+* Fri May 08 2009 Götz Waschk <waschk@mandriva.org> 1.20.0-1mdv2010.0
++ Revision: 373390
+- add perl_convert_version macro
+- new version
+- use perl convert version macro
+
+* Sun Dec 28 2008 Götz Waschk <waschk@mandriva.org> 1.0-1mdv2009.1
++ Revision: 320309
+- import perl-Guard
+
+
+* Sun Dec 28 2008 cpan2dist 1.0-1mdv
+- initial mdv release, generated with cpan2dist
+
