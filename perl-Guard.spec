@@ -1,15 +1,15 @@
 %define upstream_name    Guard
-%define upstream_version 1.022
+%define upstream_version 1.023
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Version:    %{upstream_version}
+Release:	1
 
 Summary:    Safe cleanup blocks
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module//%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Guard
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Guard-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
