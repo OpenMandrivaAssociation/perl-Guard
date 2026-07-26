@@ -1,15 +1,13 @@
 %define upstream_name    Guard
-%define upstream_version 1.023
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    1.023
+Release:	2
 
 Summary:    Safe cleanup blocks
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/Guard
-Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Guard-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Guard-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -26,7 +24,7 @@ guards, which are tied to the scope exit.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
